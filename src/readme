@@ -1,0 +1,2 @@
++Routes.js : Điều hướng trang web
++ npm install cài đặt các thư viện thiếu (đã cài redux, react-redux , react-router-dom)

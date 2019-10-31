@@ -1,26 +1,26 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import NavBar from './components/NavBar'
+import SlideShow from './components/SlideShow';
+import ProductSlide from './components/ProductSlide';
+import Thumbnail_1 from './components/Thumbnail_1';
+import Thumbnail_2 from './components/Thumbnail_2';
+import Footer from './components/Footer'
+class App extends React.Component {
+  render() {
+    return (
+        <div className="container">
+        <NavBar />
+        <SlideShow />
+        <ProductSlide />
+        <Thumbnail_1 />
+        <Thumbnail_1 />
+        <Thumbnail_2/>
+        <Thumbnail_2/>
+        <Footer/>
+      </div>
+    );
+  }
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
 }
 
 export default App;

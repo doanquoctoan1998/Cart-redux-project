@@ -1,0 +1,3 @@
+Smart Component (containers)
+Containers là những component giao tiếp với Redux thông qua connect() của react-redux.
+connect() nhận vào 4 tham số mapStateToProps mapDispatchToProps mergeProps options:

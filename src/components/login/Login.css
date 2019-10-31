@@ -1,0 +1,69 @@
+.Login{
+    max-height: 500px;
+    width: 25%;
+    text-align: center;
+    margin: 10% auto;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 5px 5px 5px 5px rgba(178, 190, 195,0.5);
+}
+.fom{
+   margin: 10% 0%;
+   font-size: 20px;
+}
+.fom input{
+    background: none;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid black;
+    padding: 10px ;
+    font-size: 14px;
+    margin-bottom: 30px;
+    width: 50%;
+}
+.fom button{
+    margin-top: 20px;
+    padding: 10px 30px;
+    background: #00FFFF;
+    border: 1px solid #00FFFF;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: bold;
+    width: 50%;
+}
+
+@media screen and ( max-width: 1200px){
+    .Login{
+        width: 38%;
+    }
+}
+@media screen and ( max-width: 700px){
+    .Login{
+        width: 80%;
+    }
+
+}
+.rou{
+    text-align: center;
+   
+}
+.roi{
+    margin-top: 5%;
+    margin-bottom: -7%;
+    font-family: 'Permanent Marker', cursive;
+}
+.bef{
+    margin: 10px;
+    text-decoration: none;
+    font-size: 20px;
+    border: 1px solid;
+    padding: 10px 20px;
+    background: #FF4500;
+    color: #fff;
+}
+
+.abc{
+    text-align: center;
+    
+}

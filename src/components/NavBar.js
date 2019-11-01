@@ -46,7 +46,7 @@ class MenuBar extends React.Component {
                     </div>
                 </div>
             </nav>
-
+            
 
         );
     }

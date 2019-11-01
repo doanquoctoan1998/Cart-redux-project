@@ -1,5 +1,5 @@
 import React from 'react';
-class Slide extends React.Component {
+class Carousel extends React.Component {
     render() {
         return (
             <div id="myCarousel" className="owl-one carousel slide" data-ride="carousel">
@@ -36,4 +36,4 @@ class Slide extends React.Component {
 
 }
 
-export default Slide;
+export default Carousel;

@@ -1,6 +1,6 @@
 import React from 'react';
-import './layout/ProductSlide.css'
-class TrendBar extends React.Component {
+import './layout/TrendingCarousel.css'
+class TrendingCarousel extends React.Component {
     render() {
         return (
             <div className="container">
@@ -299,4 +299,4 @@ class TrendBar extends React.Component {
 
 }
 
-export default TrendBar;
+export default TrendingCarousel;

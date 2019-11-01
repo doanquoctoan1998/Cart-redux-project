@@ -18,8 +18,6 @@ class MenuBar extends React.Component {
                             <li className="active"><a href="#">Home</a></li>
                             <li><a href="#">Phone</a></li>
                             <li><a href="#">Tablet</a></li>
-                            <li><a href="#">Phụ kiện</a></li>
-                            <li><a href="#">Đồng hồ </a></li>
                             <li className="dropdown">
                                 <a href="#" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span className="caret" /></a>
                                 <ul className="dropdown-menu">

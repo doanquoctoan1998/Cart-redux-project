@@ -1,6 +1,6 @@
 import React from 'react';
 import NavBar from './components/NavBar'
-import Carousel from './components/Carousel';
+import CarouselContainer from './containers/CarouselContainer'
 import TrendingCarousel from './components/TrendingCarousel';
 import Thumbnail_1 from './components/Thumbnail_1';
 import Thumbnail_2 from './components/Thumbnail_2';
@@ -10,7 +10,7 @@ class App extends React.Component {
     return ( 
       <div className="container">
         <NavBar />
-        <Carousel />
+        <CarouselContainer/>
         <TrendingCarousel />
         <Thumbnail_1 />
         <Thumbnail_1 />

@@ -1,13 +1,22 @@
 import React from 'react';
 import './layout/TrendingCarousel.css'
+import {connect} from 'react-redux'
+import * as actions from './../actions/index'
 class TrendingCarousel extends React.Component {
     render() {
+        var res = null;   
+        var {carousel} = this.props
+        if(carousel===true){
+            res = 'myCarousel'
+        }else{
+            res = ''
+        }
         return (
             <div className="container">
                 <div className="row">
                     <div className="col-md-12">
                         <h2>Trending <b>Products</b></h2>
-                        <div id="myCarousel" className="owl-two carousel slide" data-ride="carousel" data-interval={0}>
+                        <div id='myCarousel' className="owl-two carousel slide" data-ride="carousel" data-interval={0}>
                             {/* Carousel indicators */}
                             <ol className="carousel-indicators">
                                 <li data-target="#myCarousel" data-slide-to={0} className="active" />
@@ -282,12 +291,12 @@ class TrendingCarousel extends React.Component {
                                 </div>
                             </div>
                             {/* Carousel controls */}
-                            <a className="carousel-control left carousel-control-prev" href="#myCarousel" data-slide="prev">
+                            <button className="carousel-control left carousel-control-prev" href="#myCarousel" data-slide="prev" onClick = {()=>this.onClick(false)}>
                                 <i className="fa fa-angle-left" />
-                            </a>
-                            <a className="carousel-control right carousel-control-next" href="#myCarousel" data-slide="next">
+                            </button>
+                            <button className="carousel-control right carousel-control-next" href="#myCarousel" data-slide="next" onClick = {()=>this.onClick(false)}>
                                 <i className="fa fa-angle-right" />
-                            </a>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -296,7 +305,22 @@ class TrendingCarousel extends React.Component {
 
         );
     }
-
+    onClick=(isId) =>{
+        this.props.onShowCarousel(isId);
+    }
 }
 
-export default TrendingCarousel;
+const mapStateToProps = (state) => {
+    return {
+        carousel: state.carousel
+    }
+}
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        onShowCarousel: (isId) => {
+            dispatch(actions.controlCarousel(isId));
+        }
+    }
+}
+export default connect(mapStateToProps, mapDispatchToProps)(TrendingCarousel) ;

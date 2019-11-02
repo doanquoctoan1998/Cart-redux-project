@@ -1,1 +1,2 @@
 export const LIST_ALL = 'LIST_ALL';
+export const CONTROL_CAROUSEL = 'CONTROL_CAROUSEL';

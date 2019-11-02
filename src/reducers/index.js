@@ -1,6 +1,8 @@
 import {combineReducers} from 'redux'
 import products from './products'
+import carousel from './carousel'
 const appReducer = combineReducers({
-    products
+    products,
+    carousel
 });
 export default appReducer;

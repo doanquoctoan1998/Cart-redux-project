@@ -4,3 +4,10 @@ export const listAll = () => {
         type: types.LIST_ALL
     }
 }
+
+export const controlCarousel = (isId) => {
+    return {
+        type: types.CONTROL_CAROUSEL,
+        isId,
+    }
+}

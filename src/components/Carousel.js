@@ -1,25 +1,15 @@
 import React from 'react';
 class Carousel extends React.Component {
     render() {
+        console.log(this.props.children)
         return (
             <div id="myCarousel" className="owl-one carousel slide" data-ride="carousel">
-                {/* Indicators */}
-                <ol className="carousel-indicators">
-                    <li data-target="#myCarousel" data-slide-to={0} className="active" />
-                    <li data-target="#myCarousel" data-slide-to={1} />
-                    <li data-target="#myCarousel" data-slide-to={2} />
-                </ol>
-                {/* Wrapper for slides */}
                 <div className="carousel-inner">
+                    {/* Wrapper for slides */}
                     <div className="item active">
-                        <img src="https://freshdesignweb.com/demo/template/ustora/img/h4-slide.png"  />
+                        <img src="https://freshdesignweb.com/demo/template/ustora/img/h4-slide.png" alt ="IPhone 7" />
                     </div>
-                    <div className="item">
-                        <img src="https://freshdesignweb.com/demo/template/ustora/img/h4-slide3.png" />
-                    </div>
-                    <div className="item">
-                        <img src="https://freshdesignweb.com/demo/template/ustora/img/h4-slide4.png" />
-                    </div>
+                    {this.props.children}
                 </div>
                 {/* Left and right controls */}
                 <a className="left carousel-control" href="#myCarousel" data-slide="prev">
@@ -33,7 +23,6 @@ class Carousel extends React.Component {
             </div>
         );
     }
-
 }
 
 export default Carousel;

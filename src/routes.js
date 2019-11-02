@@ -1,2 +1,1 @@
-// asdas
-// sad
+import React from 'react';

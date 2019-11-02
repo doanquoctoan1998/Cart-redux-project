@@ -3,7 +3,7 @@ import Carousel from './Carousel'
 import TrendingCarousel from './TrendingCarousel'
 import Thumbnail_1 from './Thumbnail_1'
 import Thumbnail_2 from './Thumbnail_2'
-export default class Home extends React.Component
+export default class HomePage extends React.Component
 {
     render()
     {

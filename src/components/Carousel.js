@@ -1,7 +1,6 @@
 import React from 'react';
 class Carousel extends React.Component {
     render() {
-        console.log(this.props.children)
         return (
             <div id="myCarousel" className="owl-one carousel slide" data-ride="carousel">
                 <div className="carousel-inner">

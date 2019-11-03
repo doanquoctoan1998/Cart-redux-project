@@ -10,7 +10,7 @@ class MenuBar extends React.Component {
         if (routes.length > 0) {
             result = routes.map((route, index) => {
                 return (
-                    <Route  // cac thuoc tinh khai bao ben routes.js
+                    <Route 
                         key={index}
                         path={route.path}
                         exact={route.exact}
@@ -19,10 +19,10 @@ class MenuBar extends React.Component {
                 );
             });
         }
-        return <Switch>{result}</Switch>
+        return <Switch>{result}</Switch>;
     }
     render() {
-        return ( // chu y khi chuyen trang thi phai bao boc tat ca thanh phan trong 1 router
+        return (
             <Router>
                 <Menu />
                 {this.showContentMenu(routes)}

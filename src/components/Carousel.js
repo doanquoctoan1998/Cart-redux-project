@@ -2,20 +2,32 @@ import React from 'react';
 import { increaseIndex } from '../actions';
 class Carousel extends React.Component {
     render() {
+        var disabledPre = 'false';   
+        var disabledNext = 'false'; 
+        if(this.props.index === 0  ){
+            disabledPre  = true;
+        }else{
+            disabledPre = false;
+        }
+        if(this.props.index === this.props.length-1){
+            disabledNext = true;
+        }else{
+            disabledNext = false;
+        }
         return (
             <div className="owl-one carousel slide" >
                 <div className="carousel-inner">
                     {this.props.children}
                 </div>
                 {/* Left and right controls */}
-                <a className="left carousel-control" >
-                    <span className="glyphicon glyphicon-chevron-left" onClick = {this.controlPre} />
+                <button className="left carousel-control" disabled = {disabledPre} onClick = {this.controlPre}>
+                    <span className="glyphicon glyphicon-chevron-left"   />
                     <span className="sr-only">Previous</span>
-                </a>
-                <a className="right carousel-control">
-                    <span className="glyphicon glyphicon-chevron-right" onClick = {this.controlNext} />
+                </button>
+                <button className="right carousel-control" disabled = {disabledNext} onClick = {this.controlNext}  >
+                    <span className="glyphicon glyphicon-chevron-right" />
                     <span className="sr-only">Next</span>
-                </a>
+                </button>
             </div>
         );
     }
@@ -25,7 +37,6 @@ class Carousel extends React.Component {
     controlNext = ()=>{
         this.props.increase();
     }
-
 }
 
 export default Carousel;

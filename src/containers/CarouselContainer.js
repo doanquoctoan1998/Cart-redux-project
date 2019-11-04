@@ -5,9 +5,13 @@ import CarouselItem from './../components/CarouselItem'
 import * as actions from './../actions/index'
 class CarouselContainer extends React.Component {
     render() {
-        var { products, carousel, increaseIndex } = this.props
+        var { products, carousel } = this.props
         return (
-            <Carousel index={carousel} increase={this.controlImageNext} reduction = {this.controlImagePre}>
+            <Carousel 
+                index={carousel} 
+                increase={this.controlImageNext} 
+                reduction = {this.controlImagePre} 
+                length={products.length} >
                 {this.showProductImage(products)}
             </Carousel>
         );

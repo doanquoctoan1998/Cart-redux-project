@@ -2,7 +2,6 @@ import React from 'react';
 class CarouselItem extends React.Component {
     render() {
         var { product , index ,incre ,length} = this.props
-        console.log(length)
         var active = '';
         if(index === incre){
             active = 'active'

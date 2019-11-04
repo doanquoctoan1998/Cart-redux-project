@@ -5,9 +5,14 @@ export const listAll = () => {
     }
 }
 
-export const controlCarousel = (isId) => {
+export const increaseIndex = () => {
     return {
-        type: types.CONTROL_CAROUSEL,
-        isId,
+        type: types.INCREASE_INDEX,
+    }
+}
+
+export const reductionIndex = () => {
+    return {
+        type: types.REDUCTION_INDEX,
     }
 }

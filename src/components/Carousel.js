@@ -1,27 +1,31 @@
 import React from 'react';
+import { increaseIndex } from '../actions';
 class Carousel extends React.Component {
     render() {
         return (
-            <div id="myCarousel" className="owl-one carousel slide" data-ride="carousel">
+            <div className="owl-one carousel slide" >
                 <div className="carousel-inner">
-                    {/* Wrapper for slides */}
-                    <div className="item active">
-                        <img src="https://freshdesignweb.com/demo/template/ustora/img/h4-slide.png" alt ="IPhone 7" />
-                    </div>
                     {this.props.children}
                 </div>
                 {/* Left and right controls */}
-                <a className="left carousel-control" href="#myCarousel" data-slide="prev">
-                    <span className="glyphicon glyphicon-chevron-left" />
+                <a className="left carousel-control" >
+                    <span className="glyphicon glyphicon-chevron-left" onClick = {this.controlPre} />
                     <span className="sr-only">Previous</span>
                 </a>
-                <a className="right carousel-control" href="#myCarousel" data-slide="next">
-                    <span className="glyphicon glyphicon-chevron-right" />
+                <a className="right carousel-control">
+                    <span className="glyphicon glyphicon-chevron-right" onClick = {this.controlNext} />
                     <span className="sr-only">Next</span>
                 </a>
             </div>
         );
     }
+    controlPre = ()=>{
+        this.props.reduction();
+    }
+    controlNext = ()=>{
+        this.props.increase();
+    }
+
 }
 
 export default Carousel;

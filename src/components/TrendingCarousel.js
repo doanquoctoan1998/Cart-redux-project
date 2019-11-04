@@ -1,16 +1,8 @@
 import React from 'react';
 import './layout/TrendingCarousel.css'
 import {connect} from 'react-redux'
-import * as actions from './../actions/index'
 class TrendingCarousel extends React.Component {
     render() {
-        var res = null;   
-        var {carousel} = this.props
-        if(carousel===true){
-            res = 'myCarousel'
-        }else{
-            res = ''
-        }
         return (
             <div className="container">
                 <div className="row">
@@ -291,10 +283,10 @@ class TrendingCarousel extends React.Component {
                                 </div>
                             </div>
                             {/* Carousel controls */}
-                            <button className="carousel-control left carousel-control-prev" href="#myCarousel" data-slide="prev" onClick = {()=>this.onClick(false)}>
+                            <button className="carousel-control left carousel-control-prev" href="#myCarousel" data-slide="prev" >
                                 <i className="fa fa-angle-left" />
                             </button>
-                            <button className="carousel-control right carousel-control-next" href="#myCarousel" data-slide="next" onClick = {()=>this.onClick(false)}>
+                            <button className="carousel-control right carousel-control-next" href="#myCarousel" data-slide="next" >
                                 <i className="fa fa-angle-right" />
                             </button>
                         </div>
@@ -305,22 +297,5 @@ class TrendingCarousel extends React.Component {
 
         );
     }
-    onClick=(isId) =>{
-        this.props.onShowCarousel(isId);
-    }
 }
-
-const mapStateToProps = (state) => {
-    return {
-        carousel: state.carousel
-    }
-}
-
-const mapDispatchToProps = (dispatch) => {
-    return {
-        onShowCarousel: (isId) => {
-            dispatch(actions.controlCarousel(isId));
-        }
-    }
-}
-export default connect(mapStateToProps, mapDispatchToProps)(TrendingCarousel) ;
+export default TrendingCarousel ;

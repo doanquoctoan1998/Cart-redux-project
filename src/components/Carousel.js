@@ -2,17 +2,13 @@ import React from 'react';
 import { increaseIndex } from '../actions';
 class Carousel extends React.Component {
     render() {
-        var disabledPre = 'false';   
-        var disabledNext = 'false'; 
-        if(this.props.index === 0  ){
-            disabledPre  = true;
-        }else{
-            disabledPre = false;
-        }
-        if(this.props.index === this.props.length-1){
+        var disabledPre = false;
+        var disabledNext = false;
+        if (this.props.index === 0) {
+            disabledPre = true;
+        } 
+        if (this.props.index === this.props.length - 1) {
             disabledNext = true;
-        }else{
-            disabledNext = false;
         }
         return (
             <div className="owl-one carousel slide" >
@@ -20,21 +16,21 @@ class Carousel extends React.Component {
                     {this.props.children}
                 </div>
                 {/* Left and right controls */}
-                <button className="left carousel-control" disabled = {disabledPre} onClick = {this.controlPre}>
-                    <span className="glyphicon glyphicon-chevron-left"   />
+                <button className="left carousel-control" disabled={disabledPre} onClick={this.controlPre}>
+                    <span className="glyphicon glyphicon-chevron-left" />
                     <span className="sr-only">Previous</span>
                 </button>
-                <button className="right carousel-control" disabled = {disabledNext} onClick = {this.controlNext}  >
+                <button className="right carousel-control" disabled={disabledNext} onClick={this.controlNext}  >
                     <span className="glyphicon glyphicon-chevron-right" />
                     <span className="sr-only">Next</span>
                 </button>
             </div>
         );
     }
-    controlPre = ()=>{
+    controlPre = () => {
         this.props.reduction();
     }
-    controlNext = ()=>{
+    controlNext = () => {
         this.props.increase();
     }
 }

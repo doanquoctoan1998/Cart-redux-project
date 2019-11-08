@@ -16,3 +16,15 @@ export const reductionIndex = () => {
         type: types.REDUCTION_INDEX,
     }
 }
+
+export const increaseTrendingIndex = () => {
+    return {
+        type: types.INCREASE_TRENDINGINDEX,
+    }
+}
+
+export const reductionTrendingIndex = () => {
+    return {
+        type: types.REDUCTION_ITRENDINGINDEX,
+    }
+}

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Route, Link } from 'react-router-dom'
+import CartPage from './CartPage';
 const menus = [
     {
         name: 'Home',
@@ -25,6 +26,11 @@ const menus = [
     {
         name: 'Register',
         to: '/register',
+        exact: false
+    },
+    {
+        name: 'Cart',
+        to: '/cart',
         exact: false
     },
 ];

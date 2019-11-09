@@ -5,6 +5,7 @@ import Register from './components/Register';
 import PhonePage from './components/PhonePage';
 import LaptopPage from './components/LaptopPage';
 import NotFoundPage from './components/NotFoundPage';
+import CartPage from './components/CartPage';
 
 const routes = [
     {
@@ -33,13 +34,18 @@ const routes = [
         path : '/register',
         exact : false,
         main :()=><Register/>
-    }
-    ,
+    },
+    {
+        path : '/cart',
+        exact : false,
+        main :()=><CartPage/>
+    },
     {
         path : '',
         exact : false,
         main :()=><NotFoundPage/>
     },
+    
 
 ];
 export default routes;

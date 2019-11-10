@@ -4,31 +4,29 @@ class TrendingCarouselItem extends React.Component {
     render() {
 
         var rate = Math.floor(Math.random() * 5) + 1;
-        var sale = Math.floor(Math.random() * 100);
+        var sale = Math.floor(Math.random() *100);
+        console.log(sale)
         var { products, trendingcarousel } = this.props;
         var active = 'active'
         return (
             <div className="carousel-inner">
-                {this.showTrendingItem(products, rate, trendingcarousel)}
+                {this.showTrendingItem(products, rate,sale, trendingcarousel)}
             </div>
         );
 
     }
-    showTrendingItem = (products, rate, trendingcarousel) => {
+    showTrendingItem = (products, rate,sale, trendingcarousel) => {
         var result = [];
         for (let i = 0; i < products.length; i += 4) {
-            console.log(trendingcarousel)
             var active = '';
             if ((i) / 4 === trendingcarousel) {
                 active = 'active'
-                console.log(active)
             }
-            result.push(this.showContent(products.slice(i, i + 4), rate, active));
+            result.push(this.showContent(products.slice(i, i + 4), rate,sale, active));
         }
         return result;
     }
-    showContent = (products, rate, active) => {
-        console.log(products)
+    showContent = (products, rate,sale, active) => {
         return (
             <div className={`item carousel-item ${active}`}>
                 <div className="row">
@@ -41,7 +39,7 @@ class TrendingCarouselItem extends React.Component {
                                     </div>
                                     <div className="thumb-content">
                                         <h4>{product.name}</h4>
-                                        <p className="item-price"><strike>${product.price}</strike> <span>$349.00</span></p>
+                                        <p className="item-price"><strike>${product.price/20000}</strike> <span>${(product.price*(1-sale/100)/20000).toFixed(1)}</span></p>
                                         <div className="star-rating">
                                             <ul className="list-inline">
                                                 <li className="list-inline-item">

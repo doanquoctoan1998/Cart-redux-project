@@ -5,7 +5,7 @@ import Menu from './Menu'
 import routes from './../routes'
 
 class MenuBar extends React.Component {
-    showContentMenu = (routes) => {
+    routerLinkMenu = (routes) => {
         var result = null;
         if (routes.length > 0) {
             result = routes.map((route, index) => {
@@ -25,7 +25,7 @@ class MenuBar extends React.Component {
         return (
             <Router>
                 <Menu />
-                {this.showContentMenu(routes)}
+                {this.routerLinkMenu(routes)}
             </Router>
         );
     }

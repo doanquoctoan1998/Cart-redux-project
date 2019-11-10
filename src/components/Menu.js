@@ -18,19 +18,19 @@ const menus = [
         exact: false
     },
     ,
+    // {
+    //     name: 'Login',
+    //     to: '/login',
+    //     exact: false
+    // },
+    // {
+    //     name: 'Register',
+    //     to: '/register',
+    //     exact: false
+    // },
     {
-        name: 'Login',
-        to: '/login',
-        exact: false
-    },
-    {
-        name: 'Register',
-        to: '/register',
-        exact: false
-    },
-    {
-        name: 'Cart',
-        to: '/cart',
+        name: 'Admin',
+        to: '/admin',
         exact: false
     },
 ];
@@ -64,8 +64,20 @@ class Menu extends React.Component {
                             <span className="icon-bar" />
                             <span className="icon-bar" />
                         </button>
-                        <ul className='nav navbar-nav' >
-                            {this.showMenu(menus)}
+                        <ul className='collapse navbar-collapse navbar-ex1-collapse' >
+                            <ul className="nav navbar-nav">
+                                {this.showMenu(menus)}
+                            </ul>
+                            <form className="navbar-form navbar-left" role="search">
+                                <div className="form-group">
+                                    <input type="text" className="form-control" placeholder="Product, catagories ... " />
+                                </div>
+                                <button type="submit" className="btn btn-default">Search</button>
+                            </form>
+                                <ul class="nav navbar-nav navbar-right">
+                                <li><Link to="/Register"><span class="glyphicon glyphicon-user"></span> Sign Up</Link></li>
+                                <li><Link to="/Login"><span class="glyphicon glyphicon-log-in"></span> Login</Link></li>
+                            </ul>
                         </ul>
                     </div>
                 </div>

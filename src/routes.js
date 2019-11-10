@@ -6,6 +6,7 @@ import PhonePage from './components/PhonePage';
 import LaptopPage from './components/LaptopPage';
 import NotFoundPage from './components/NotFoundPage';
 import CartPage from './components/CartPage';
+import AdminPage from './components/admin/AdminPage';
 
 const routes = [
     {
@@ -41,10 +42,16 @@ const routes = [
         main :()=><CartPage/>
     },
     {
+        path : '/admin',
+        exact : false,
+        main :()=><AdminPage/>
+    },
+    {
         path : '',
         exact : false,
         main :()=><NotFoundPage/>
     },
+    
     
 
 ];

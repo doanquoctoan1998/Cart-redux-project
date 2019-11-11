@@ -70,7 +70,7 @@ class AdminPage extends React.Component {
                                 <div className="col-sm-3">
                                     <div className="well">
                                         <h4>Revenue</h4>
-                                        <p>Up 30%<span class="glyphicon">&#xe093;</span></p>
+                                        <p>Up 30%<span className="glyphicon">&#xe093;</span></p>
                                         <a href="#">View Details:<span className="glyphicon">&#xe032;</span>
                                         </a>
                                     </div>

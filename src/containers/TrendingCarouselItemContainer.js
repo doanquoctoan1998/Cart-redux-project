@@ -15,7 +15,7 @@ class TrendingCarouselItemContainer extends React.Component {
 }
 const mapStateToProps = (state) => {
     return {
-        products: state.products,
+        products: state.trendingproducts,
         trendingcarousel : state.trendingcarousel,
     }
 }

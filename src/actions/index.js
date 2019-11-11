@@ -28,3 +28,18 @@ export const reductionTrendingIndex = () => {
         type: types.REDUCTION_ITRENDINGINDEX,
     }
 }
+export const listProductTrending = () => {
+    return {
+        type: types.LIST_PRODUCT_TRENDING
+    }
+}
+export const listPhoneTrending = () => {
+    return {
+        type: types.LIST_PHONE_TRENDING
+    }
+}
+export const listLatopTrending = () => {
+    return {
+        type: types.LIST_LAPTOP_TRENDING
+    }
+}

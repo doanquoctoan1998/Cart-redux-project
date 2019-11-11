@@ -74,9 +74,9 @@ class Menu extends React.Component {
                                 </div>
                                 <button type="submit" className="btn btn-default">Search</button>
                             </form>
-                                <ul class="nav navbar-nav navbar-right">
-                                <li><Link to="/Register"><span class="glyphicon glyphicon-user"></span> Sign Up</Link></li>
-                                <li><Link to="/Login"><span class="glyphicon glyphicon-log-in"></span> Login</Link></li>
+                                <ul className="nav navbar-nav navbar-right">
+                                <li><Link to="/Register"><span className="glyphicon glyphicon-user"></span> Sign Up</Link></li>
+                                <li><Link to="/Login"><span className="glyphicon glyphicon-log-in"></span> Login</Link></li>
                             </ul>
                         </ul>
                     </div>

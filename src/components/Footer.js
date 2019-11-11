@@ -1,62 +1,61 @@
 import React from 'react';
+import './layout/footer.css'
 class Footer extends React.Component {
     render() {
         return (
-            <div className="footer-top-area">
-                <div className="zigzag-bottom" />
+            <section id="footer">
                 <div className="container">
+                    <div className="row text-center text-xs-center text-sm-left text-md-left">
+                        <div className="col-xs-12 col-sm-4 col-md-4">
+                            <h5>Quick links</h5>
+                            <ul className="list-unstyled quick-links">
+                                <li><a  href="#"><i className="fa fa-angle-double-right" />Home</a></li>
+                                <li><a  href="#"><i className="fa fa-angle-double-right" />About</a></li>
+                                <li><a  href="#"><i className="fa fa-angle-double-right" />FAQ</a></li>
+                                <li><a  href="#"><i className="fa fa-angle-double-right" />Get Started</a></li>
+                                <li><a  href="#"><i className="fa fa-angle-double-right" />Videos</a></li>
+                            </ul>
+                        </div>
+                        <div className="col-xs-12 col-sm-4 col-md-4">
+                            <h5>Quick links</h5>
+                            <ul className="list-unstyled quick-links">
+                                <li><a  href="#"><i className="fa fa-angle-double-right" />Home</a></li>
+                                <li><a  href="#"><i className="fa fa-angle-double-right" />About</a></li>
+                                <li><a  href="#"><i className="fa fa-angle-double-right" />FAQ</a></li>
+                                <li><a  href="#"><i className="fa fa-angle-double-right" />Get Started</a></li>
+                                <li><a  href="#"><i className="fa fa-angle-double-right" />Videos</a></li>
+                            </ul>
+                        </div>
+                        <div className="col-xs-12 col-sm-4 col-md-4">
+                            <h5>Quick links</h5>
+                            <ul className="list-unstyled quick-links">
+                                <li><a  href="#"><i className="fa fa-angle-double-right" />Home</a></li>
+                                <li><a  href="#"><i className="fa fa-angle-double-right" />About</a></li>
+                                <li><a  href="#"><i className="fa fa-angle-double-right" />FAQ</a></li>
+                                <li><a  href="#"><i className="fa fa-angle-double-right" />Get Started</a></li>
+                                <li><a href="https://wwwe.sunlimetech.com" title="Design and developed by"><i className="fa fa-angle-double-right" />Imprint</a></li>
+                            </ul>
+                        </div>
+                    </div>
                     <div className="row">
-                        <div className="col-md-3 col-sm-6">
-                            <div className="footer-about-us">
-                                <h2>u<span>Store</span></h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis sunt id doloribus vero quam laborum quas alias dolores blanditiis iusto consequatur, modi aliquid eveniet eligendi iure eaque ipsam iste, pariatur omnis sint! Suscipit, debitis, quisquam. Laborum commodi veritatis magni at?</p>
-                                <div className="footer-social">
-                                    <a href="#" target="_blank"><i className="fa fa-facebook" /></a>
-                                    <a href="#" target="_blank"><i className="fa fa-twitter" /></a>
-                                    <a href="#" target="_blank"><i className="fa fa-youtube" /></a>
-                                    <a href="#" target="_blank"><i className="fa fa-linkedin" /></a>
-                                </div>
-                            </div>
+                        <div className="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-5">
+                            <ul className="list-unstyled list-inline social text-center">
+                                <li className="list-inline-item"><a  href="#"><i className="fa fa-facebook" /></a></li>
+                                <li className="list-inline-item"><a  href="#"><i className="fa fa-twitter" /></a></li>
+                                <li className="list-inline-item"><a  href="#"><i className="fa fa-instagram" /></a></li>
+                                <li className="list-inline-item"><a  href="#"><i className="fa fa-google-plus" /></a></li>
+                                <li className="list-inline-item"><a  href="#" target="_blank"><i className="fa fa-envelope" /></a></li>
+                            </ul>
                         </div>
-                        <div className="col-md-3 col-sm-6">
-                            <div className="footer-menu">
-                                <h2 className="footer-wid-title">User Navigation </h2>
-                                <ul>
-                                    <li><a href="#">My account</a></li>
-                                    <li><a href="#">Order history</a></li>
-                                    <li><a href="#">Wishlist</a></li>
-                                    <li><a href="#">Vendor contact</a></li>
-                                    <li><a href="#">Front page</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div className="col-md-3 col-sm-6">
-                            <div className="footer-menu">
-                                <h2 className="footer-wid-title">Categories</h2>
-                                <ul>
-                                    <li><a href="#">Mobile Phone</a></li>
-                                    <li><a href="#">Home accesseries</a></li>
-                                    <li><a href="#">LED TV</a></li>
-                                    <li><a href="#">Computer</a></li>
-                                    <li><a href="#">Gadets</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div className="col-md-3 col-sm-6">
-                            <div className="footer-newsletter">
-                                <h2 className="footer-wid-title">Newsletter</h2>
-                                <p>Sign up to our newsletter and get exclusive deals you wont find anywhere else straight to your inbox!</p>
-                                <div className="newsletter-form">
-                                    <form action="#">
-                                        <input type="email" placeholder="Type your email" />
-                                        <input type="submit" defaultValue="Subscribe" />
-                                    </form>
-                                </div>
-                            </div>
+                    </div>
+                    <div className="row">
+                        <div className="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">
+                            <p><u><a href="https://www.nationaltransaction.com/">National Transaction Corporation</a></u> is a Registered MSP/ISO of Elavon, Inc. Georgia [a wholly owned subsidiary of U.S. Bancorp, Minneapolis, MN]</p>
+                            <p className="h6">© All right Reversed.<a className="text-green ml-2" href="https://www.sunlimetech.com" target="_blank">Sunlimetech</a></p>
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
         );
     }
 

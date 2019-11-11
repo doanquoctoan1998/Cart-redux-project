@@ -5,7 +5,6 @@ class TrendingCarouselItem extends React.Component {
 
         var rate = Math.floor(Math.random() * 5) + 1;
         var sale = Math.floor(Math.random() *100);
-        console.log(sale)
         var { products, trendingcarousel } = this.props;
         var active = 'active'
         return (
@@ -22,13 +21,13 @@ class TrendingCarouselItem extends React.Component {
             if ((i) / 4 === trendingcarousel) {
                 active = 'active'
             }
-            result.push(this.showContent(products.slice(i, i + 4), rate,sale, active));
+            result.push(this.showContent(products.slice(i, i + 4), rate,sale, active,i));
         }
         return result;
     }
-    showContent = (products, rate,sale, active) => {
+    showContent = (products, rate,sale, active, i) => {
         return (
-            <div className={`item carousel-item ${active}`}>
+            <div key ={i}className={`item carousel-item ${active}`}>
                 <div className="row">
                     {products.map((product, index) => {
                         return (

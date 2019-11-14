@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
-  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
-namespace :api do
-  namespace :v1 do
-   resources :users
-  end
- end
+	namespace :api, defaults: { format: 'json' } do
+		namespace :v1 do
+			resources :users
+  			resources :products
+		end
+	end
+
+  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

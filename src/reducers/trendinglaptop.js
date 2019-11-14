@@ -1,6 +1,6 @@
 import * as types from './../constants/ActionTypes'
 var initialState = [
-    ,{
+    {
         "id": 212,
         "category_id": 22,
         "name": "Asus VivoBook ",

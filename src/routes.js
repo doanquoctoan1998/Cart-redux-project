@@ -7,7 +7,6 @@ import LaptopPage from './components/LaptopPage';
 import NotFoundPage from './components/NotFoundPage';
 import CartPage from './components/CartPage';
 import AdminPage from './components/admin/AdminPage';
-
 const routes = [
     {
         path : '/',
@@ -43,16 +42,13 @@ const routes = [
     },
     {
         path : '/admin',
-        exact : false,
+        exact : true,
         main :()=><AdminPage/>
     },
     {
         path : '',
-        exact : false,
+        exact : true,
         main :()=><NotFoundPage/>
     },
-    
-    
-
 ];
 export default routes;

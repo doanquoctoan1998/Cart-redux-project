@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import HomePage from './components/HomePage';
 import Login from './components/Login';
 import Register from './components/Register';
@@ -18,7 +18,6 @@ const routes = [
         exact : false,
         main :()=><PhonePage/>
     },
-    ,
     {
         path : '/laptop',
         exact : false,
@@ -50,5 +49,5 @@ const routes = [
         exact : true,
         main :()=><NotFoundPage/>
     },
-];
+]
 export default routes;

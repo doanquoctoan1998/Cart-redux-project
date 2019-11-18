@@ -1,6 +1,7 @@
 import React from 'react';
 import { Route, Link } from 'react-router-dom'
-import CartPage from './CartPage';
+// import CartPage from './CartPage';
+// eslint-disable-next-line no-sparse-arrays
 const menus = [
     {
         name: 'Home',
@@ -17,7 +18,11 @@ const menus = [
         to: '/laptop',
         exact: false
     },
-    ,
+    {
+        name: 'Cart',
+        to: '/cart',
+        exact: false
+    },
     // {
     //     name: 'Login',
     //     to: '/login',

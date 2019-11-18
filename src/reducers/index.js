@@ -5,13 +5,17 @@ import trendingcarousel from './trendingcarousel'
 import trendingproducts from './trendingproducts'
 import trendingphone from './trendingphone'
 import trendinglaptop from './trendinglaptop'
+import cart from './cart'
+import message from './messege'
 const appReducer = combineReducers({
     products,
     carousel,
     trendingcarousel,
     trendingproducts,
     trendingphone,
-    trendinglaptop
+    trendinglaptop,
+    cart,
+    message
     
 });
 export default appReducer;
